@@ -116,10 +116,107 @@ static void Main()
 // 1.14. Составить программу вывода на экран в одну строку трех любых чисел, вводимых с клавиатуры, с двумя пробелами между ними.
 static void Main()
         {
-            int a =  1,b = 2,c = 3;
-            Console.WriteLine($"{a}  {b}  {c}");
+            var numList = new List<int>();
+
+            for (int i = 0; i < 3;  i++) 
+            {
+                Console.Write("Enter your number: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                numList.Add(num);
+            }
+
+            foreach (int i in numList)
+            {
+                if (i == numList[numList.Count - 1])
+                {
+                    Console.Write($"{i}");
+                }
+                else
+                {
+                    Console.Write($"{i}  ");
+                }
+            }
+            Console.ReadKey();
+        }
+
+// 1.15. Составить программу вывода на экран в одну строку четырех любых чисел, вводимых с клавиатуры, с одним пробелом между ними.
+static void Main()
+        {
+            var numList = new List<int>();
+
+            for (int i = 0; i < 4;  i++) 
+            {
+                Console.Write("Enter your number: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                numList.Add(num);
+            }
+
+            foreach (int i in numList)
+            {
+                if (i == numList[numList.Count - 1])
+                {
+                    Console.Write($"{i}");
+                }
+                else
+                {
+                    Console.Write($"{i} ");
+                }
+            }
             Console.ReadKey();
         }
 
 
-// 1.15. Составить программу вывода на экран в одну строку четырех любых чисел, вводимых с клавиатуры, с одним пробелом между ними.
+
+
+
+
+
+//Напишите консольную программу, в которую пользователь вводит с клавиатуры два числа. А программа сранивает два введенных числа и
+//выводит на консоль результат сравнения (два числа равны, первое число больше второго или первое число меньше второго).
+static void Main()
+        {
+            Console.Write("Enter first number: ");
+            var num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter second number: ");
+            var num2 = Convert.ToInt32(Console.ReadLine());
+
+            if (num1 == num2)
+            {
+                Console.WriteLine("Both nums equals");
+                Console.ReadKey();
+            }
+            else if (num1 > num2)
+            {
+                Console.WriteLine("The first num bigger than the second");
+                Console.ReadKey();
+            }
+            else if (num1 < num2)
+            {
+                Console.WriteLine("The first number is smaller than the second");
+                Console.ReadKey();
+            }
+        }
+
+// Напишите консольную программу, в которую пользователь вводит с клавиатуры число. Если число одновременно больше 5 и меньше 10, то программа выводит "Число больше 5 и меньше 10". Иначе программа выводит сообщение "Неизвестное число".
+static void Main()
+        {
+            Console.Write("Enter any number: ");
+            var num = Convert.ToInt32(Console.ReadLine());
+
+            if (num > 5 && num < 10)
+            {
+                Console.WriteLine("The num is bigger than 5 and smaller than 10.");
+                Console.ReadKey();
+            }
+            else if (num1 > num2)
+            {
+                Console.WriteLine("The first num bigger than the second");
+                Console.ReadKey();
+            }
+            else if (num1 < num2)
+            {
+                Console.WriteLine("The first number is smaller than the second");
+                Console.ReadKey();
+            }
+        }
